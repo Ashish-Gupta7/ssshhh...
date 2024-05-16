@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ssshhh...</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class=" overflow-hidden">
     <audio id="loop_audio" src="./audio/ambient-loop.mp3" loop></audio>
     <audio id="hover_audio" src="./audio/hover.mp3"></audio>
-    <div id="main" class="">
+    <div id="main" class="selection:bg-black selection:text-[#00ff00]">
         <div class="landing_page  font-semibold flex items-center justify-center flex-col bg-red-950 text- h-full">
             <div class="content_center text-center">
                 <h1 class="gradient-text text-8xl">Ssshhhh...Koi Hai</h1>
                 <div class="flex items-center justify-center text-[#ff9100] underline hover:gap-2">
-                    <a href="" id="hover_me" class="text-2xl">Enter The Forgotten World</a>
+                    <h2 id="hover_me" class="forgotten text-2xl cursor-pointer">Enter The Forgotten World</h2>
                     <i class="ri-arrow-drop-right-line text-3xl"></i>
                 </div>
             </div>
-            <div class="content_end bg-green-700 flex items-center gap-6 absolute bottom-5 left-4">
+            <div class="content_end animate__animated animate__bounce bg-green-700 flex items-center gap-6 absolute bottom-5 left-4">
                 <div class="git flex gap-1">
                     <h4>Github:</h4>
-                    <a id="hover_me" class="underline" href="https://github.com/Ashish-Gupta7/">Ashish-Gupta7</a>
+                    <a id="hover_me" class="underline" href="https://github.com/Ashish-Gupta7/" target="_blank">Ashish-Gupta7</a>
                 </div>
-                <a id="hover_me" class="underline" href="http://www.staggeringbeauty.com/">Staggeringbeauty</a>
             </div>
         </div>
 
     </div>
     
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 </html>

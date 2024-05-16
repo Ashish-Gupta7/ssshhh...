@@ -13,9 +13,34 @@ const hoverAudioPlayer = () => {
         })
     });
 }
-hoverAudioPlayer();
 
-const loopAudio = document.querySelector("#loop_audio");
-window.addEventListener("click", () => {
-    loopAudio.play();
-})
+const infiniteLoopAudio = () => {
+    const loopAudio = document.querySelector("#loop_audio");
+    window.addEventListener("click", () => {
+        loopAudio.play();
+    });
+}
+
+const animateLandingOpenLink = () => {
+    const openLink = () => {
+        window.location.href = "./homepage.html";
+    }
+    
+    const forgotten = document.querySelector(".forgotten");
+    forgotten.addEventListener("click", () => {
+        landingPageZoom();
+        setTimeout(openLink, 1400);
+    });
+    
+    const main = document.querySelector("#main");
+    const landingPageZoom = () => {
+        gsap.to(main, {
+            duration: 1,
+            scale: 2,
+        })
+    }
+}
+
+hoverAudioPlayer();
+infiniteLoopAudio();
+animateLandingOpenLink();
