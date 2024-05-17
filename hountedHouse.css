@@ -1,0 +1,44 @@
+@font-face {
+    font-family: paint;
+    src: url(./fonts/PaintDropsRegular-0WaJo.ttf);
+}
+@font-face {
+    font-family: butcherman;
+    src: url(./fonts/Butcherman-Regular.ttf);
+}
+@font-face {
+    font-family: creepster;
+    src: url(./fonts/Creepster-Regular.ttf);
+}
+
+.paint{
+    font-family: paint;
+}
+.creepster{
+    font-family: creepster;
+}
+body{
+    counter-reset: myCount;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: #09090B;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #EAB308;
+}
+.counter::before{
+    content: counter(myCount) ". ";
+    counter-increment: myCount;
+}
+.head{
+    background-image: url(./images/head.png);
+    position: fixed;
+    height: 100%;
+    width: 150%;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .03;
+}

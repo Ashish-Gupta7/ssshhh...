@@ -28,7 +28,6 @@ html, body{
 #home{
     background-image: url(./images/premium_photo-1694111281053-3e95c763924d.avif);
 }
-
 #home::after{
     background-image: radial-gradient(black, #00ff00, black, #00ff00);
 }

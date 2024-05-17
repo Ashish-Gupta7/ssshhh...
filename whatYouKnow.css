@@ -1,0 +1,66 @@
+@font-face {
+    font-family: paint;
+    src: url(./fonts/PaintDropsRegular-0WaJo.ttf);
+}
+@font-face {
+    font-family: butcherman;
+    src: url(./fonts/Butcherman-Regular.ttf);
+}
+@font-face {
+    font-family: creepster;
+    src: url(./fonts/Creepster-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.paint{
+    font-family: paint;
+}
+.creepster{
+    font-family: creepster;
+}
+
+selector {
+    counter-reset: myCount, fest;
+}
+
+body {
+    counter-reset: myCount 0 fest 0 ad 0;
+}
+.counter::before {
+    counter-increment: myCount;
+    content: counter(myCount) ". ";
+}
+  
+.festival::before {
+    counter-increment: fest;
+    content: counter(fest) ". ";
+}
+.adeath::before {
+    counter-increment: ad;
+    content: counter(ad) ". ";
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: #09090B;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #EAB308;
+}
+.head{
+    background-image: url(./images/head.png);
+    position: fixed;
+    height: 110%;
+    width: 155%;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .05;
+}
