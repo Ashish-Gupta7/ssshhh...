@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ssshhh...</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="deathDate.css">
+</head>
+
+<body>
+    <div class="ddbg selection:text-red-600 w-full min-h-full bg-black text-[#C4B48A] py-12 px-20 flex gap-20 after:contents-[] after:h-full after:w-full after:absolute after:top-0 after:left-0 after:bg-no-repeat after:bg-center after:bg-contain after:opacity-[.05] after:pointer-events-none">
+        <div class="w-[18%]">
+            <img class="" src="./images/dd-logo.jpg" alt="">
+            <div class="flex flex-col gap-2 mt-10">
+                <a class="px-5 py-3 border text-[#d26e21] border-[#BB9944] w-60 text-center" href="/index.html">Your age
+                    on other planet</a>
+                <a class="px-5 py-3 border text-[#BB9944] border-zinc-500 w-60 text-center" href="/homepage.html">Back
+                    to Homepage</a>
+                <a class="px-5 py-3 border text-[#BB9944] border-zinc-500 w-60 text-center" href="/index.html">Go to
+                    Landing Page</a>
+            </div>
+        </div>
+        <div class="w-[50%] pt-1">
+            <h1 class="paint text-3xl">Enter your details mortal</h1>
+            <div class="w-full h-[1px] bg-[#BB9944]"></div>
+            <p class="pt-3">Please fill out this form, don't be afraid to share your data - it's necessary only for your
+                Death Date calculations, the only thing you should be concerned about is the time you have left...</p>
+            <form class="mt-12" action="">
+                <div class="mt-3 flex">
+                    <label class="w-40 h-max block" for="name">Name <span class="font-bold">:</span></label>
+                    <input
+                        class="bg-[#1B1109] rounded-sm h-6 w-[40%] border border-zinc-600 outline-none py-[2px] px-1 text-sm"
+                        type="text" name="name" id="name">
+                </div>
+                <div class="mt-3 flex">
+                    <label class="w-40 h-max block" for="birth">Birth date <span class="font-bold">:</span></label>
+                    <input
+                        class="bg-[#1B1109] rounded-sm h-6 w-[40%] border border-zinc-600 outline-none py-[2px] px-1 text-sm uppercase"
+                        type="date" name="birth" id="name">
+                </div>
+                <div class="mt-3 flex">
+                    <label class="w-40 h-max block" for="sex">Sex <span class="font-bold">:</span></label>
+                    <div class="flex items-center justify-center">
+                        <input class="appearance-none rounded-full w-[12px] h-[12px] border-[2px] border-[#C4B48A] transition-all duration-200 ease-linear relative checked:border-[4px] checked:border-[#d9be79] bg-transparent" type="radio" id="male" name="sex" value="Male" />
+                        <label class="block mb-[1.15px] ml-1" for="male">Male</label>
+                    </div>
+
+                    <div class="flex items-center justify-center ml-5">
+                        <input class="appearance-none rounded-full w-[12px] h-[12px] border-[2px] border-[#C4B48A] transition-all duration-200 ease-linear relative checked:border-[4px] checked:border-[#d9be79] bg-transparent" type="radio" id="female" name="sex" value="Female" />
+                        <label class="block mb-[1.15px] ml-1" for="female">Female</label>
+                    </div>
+                </div>
+                <div class="mt-3 flex">
+                    <label class="w-40 h-max block" for="height">Height <span class="font-bold">:</span></label>
+                    <div class="flex">
+                        <input class="number bg-[#1B1109] rounded-sm h-[22px] w-[20%] border border-zinc-600 outline-none py-[2px] px-1 text-sm" type="text" min="10" max="200" name="height" id="height" minlength="1" maxlength="3">
+                        <label class="ml-1 block" for="height">cm</label>
+                    </div>
+                </div>
+                <div class="mt-3 flex">
+                    <label class="w-40 h-max block" for="weight">weight <span class="font-bold">:</span></label>
+                    <div class="flex">
+                        <input class="number bg-[#1B1109] rounded-sm h-[22px] w-[20%] border border-zinc-600 outline-none py-[2px] px-1 text-sm" type="text" min="10" max="200" name="weight" id="weight" minlength="1" maxlength="3">
+                        <label class="ml-1 block" for="weight">kg</label>
+                    </div>
+                </div>
+                <div class="mt-3 flex">
+                    <label class="w-40 h-max block" for="Stimulants">Stimulants <span class="font-bold">:</span></label>
+                    <div class="flex flex-col">
+                        <div class="flex gap-2 text-[#C4B48A]">
+                            <input class="accent-black" type="checkbox" name="Cigarettes" id="Cigarettes" value="Cigarettes">
+                            <label class="block" for="Cigarettes">Cigarettes</label>
+                        </div>
+                        <div class="flex gap-2 text-[#C4B48A]">
+                            <input class="accent-black" type="checkbox" name="Alcohol" id="Alcohol" value="Alcohol">
+                            <label class="block" for="Alcohol">Alcohol</label>
+                        </div>
+                        <div class="flex gap-2 text-[#C4B48A]">
+                            <input class="accent-black" type="checkbox" name="Drugs" id="Drugs" value="Drugs">
+                            <label class="block" for="Drugs">Drugs</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mt-5">
+                    <img class="w-[30%] h-[30px]" src="./images/dd-btn.jpg" alt="">
+                    <input class="absolute top-[2px] left-[4%]" type="submit" value="Calculate Death Date">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const allowOnlyNumbers = (event) => {
+            if (!/\d/.test(event.key)) {
+                event.preventDefault();
+            }
+        }
+        document.querySelector('.number').addEventListener('keypress', allowOnlyNumbers);
+    </script>
+</body>
+
+</html>
