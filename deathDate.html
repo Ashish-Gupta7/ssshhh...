@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <div class="ddbg selection:text-red-600 w-full min-h-full bg-black text-[#C4B48A] py-12 px-20 flex gap-20 after:contents-[] after:h-full after:w-full after:absolute after:top-0 after:left-0 after:bg-no-repeat after:bg-center after:bg-contain after:opacity-[.05] after:pointer-events-none">
+    <div class="ddbg selection:text-red-600 w-full min-h-full bg-black text-[#C4B48A] py-12 px-20 flex gap-20 after:contents-[] after:h-full after:w-full after:absolute after:top-0 after:left-0 after:bg-no-repeat after:bg-center after:bg-contain after:opacity-[.05] after:pointer-events-none relative">
         <div class="w-[18%]">
             <img class="" src="./images/dd-logo.jpg" alt="">
-            <div class="flex flex-col gap-2 mt-10">
+            <div class="flex flex-col gap-2 mt-12">
                 <a class="px-5 py-3 border text-[#d26e21] border-[#BB9944] w-60 text-center" href="/index.html">Your age
                     on other planet</a>
                 <a class="px-5 py-3 border text-[#BB9944] border-zinc-500 w-60 text-center" href="/homepage.html">Back
@@ -27,48 +27,44 @@
         <div class="w-[50%] pt-1">
             <h1 class="paint text-3xl">Enter your details mortal</h1>
             <div class="w-full h-[1px] bg-[#BB9944]"></div>
-            <p class="pt-3">Please fill out this form, don't be afraid to share your data - it's necessary only for your
+            <p class="pt-3 text-sm capitalize">Please fill out this form, don't be afraid to share your data - it's necessary only for your
                 Death Date calculations, the only thing you should be concerned about is the time you have left...</p>
             <form class="mt-12" action="">
-                <div class="mt-3 flex">
+                <div class="mt-4 flex">
                     <label class="w-40 h-max block" for="name">Name <span class="font-bold">:</span></label>
-                    <input
-                        class="bg-[#1B1109] rounded-sm h-6 w-[40%] border border-zinc-600 outline-none py-[2px] px-1 text-sm"
-                        type="text" name="name" id="name">
+                    <input class="bg-[#1B1109] rounded-sm h-6 w-[40%] border border-zinc-600 outline-none py-[2px] px-1 text-sm" type="text" name="name" id="name" maxlength="30" autocomplete="off" required oninvalid="this.setCustomValidity('Please! Enter Your Name.')">
                 </div>
-                <div class="mt-3 flex">
+                <div class="mt-4 flex">
                     <label class="w-40 h-max block" for="birth">Birth date <span class="font-bold">:</span></label>
-                    <input
-                        class="bg-[#1B1109] rounded-sm h-6 w-[40%] border border-zinc-600 outline-none py-[2px] px-1 text-sm uppercase"
-                        type="date" name="birth" id="name">
+                    <input class="bg-[#1B1109] rounded-sm h-6 w-[40%] border border-zinc-600 outline-none py-[2px] px-1 text-sm uppercase" type="date" name="birth" id="dob" required oninvalid="this.setCustomValidity('Please! Enter Your DOB.')">
                 </div>
-                <div class="mt-3 flex">
+                <div class="mt-4 flex">
                     <label class="w-40 h-max block" for="sex">Sex <span class="font-bold">:</span></label>
                     <div class="flex items-center justify-center">
-                        <input class="appearance-none rounded-full w-[12px] h-[12px] border-[2px] border-[#C4B48A] transition-all duration-200 ease-linear relative checked:border-[4px] checked:border-[#d9be79] bg-transparent" type="radio" id="male" name="sex" value="Male" />
+                        <input class="appearance-none rounded-full w-[12px] h-[12px] border-[2px] border-[#C4B48A] transition-all duration-200 ease-linear relative checked:border-[4px] checked:border-[#d9be79] bg-transparent" type="radio" id="male" name="sex" value="Male" required/>
                         <label class="block mb-[1.15px] ml-1" for="male">Male</label>
                     </div>
 
                     <div class="flex items-center justify-center ml-5">
-                        <input class="appearance-none rounded-full w-[12px] h-[12px] border-[2px] border-[#C4B48A] transition-all duration-200 ease-linear relative checked:border-[4px] checked:border-[#d9be79] bg-transparent" type="radio" id="female" name="sex" value="Female" />
+                        <input class="appearance-none rounded-full w-[12px] h-[12px] border-[2px] border-[#C4B48A] transition-all duration-200 ease-linear relative checked:border-[4px] checked:border-[#d9be79] bg-transparent" type="radio" id="female" name="sex" value="Female" required/>
                         <label class="block mb-[1.15px] ml-1" for="female">Female</label>
                     </div>
                 </div>
-                <div class="mt-3 flex">
+                <div class="mt-4 flex">
                     <label class="w-40 h-max block" for="height">Height <span class="font-bold">:</span></label>
                     <div class="flex">
-                        <input class="number bg-[#1B1109] rounded-sm h-[22px] w-[20%] border border-zinc-600 outline-none py-[2px] px-1 text-sm" type="text" min="10" max="200" name="height" id="height" minlength="1" maxlength="3">
+                        <input class="number bg-[#1B1109] rounded-sm h-[22px] w-[20%] border border-zinc-600 outline-none py-[2px] px-1 text-sm" type="text" min="10" max="200" name="height" id="height" minlength="1" maxlength="3" required oninvalid="this.setCustomValidity('Please! Enter Your Height.')">
                         <label class="ml-1 block" for="height">cm</label>
                     </div>
                 </div>
-                <div class="mt-3 flex">
+                <div class="mt-4 flex">
                     <label class="w-40 h-max block" for="weight">weight <span class="font-bold">:</span></label>
                     <div class="flex">
-                        <input class="number bg-[#1B1109] rounded-sm h-[22px] w-[20%] border border-zinc-600 outline-none py-[2px] px-1 text-sm" type="text" min="10" max="200" name="weight" id="weight" minlength="1" maxlength="3">
+                        <input class="number bg-[#1B1109] rounded-sm h-[22px] w-[20%] border border-zinc-600 outline-none py-[2px] px-1 text-sm" type="text" min="10" max="200" name="weight" id="weight" minlength="1" maxlength="3" required oninvalid="this.setCustomValidity('Please! Enter Your Weight.')">
                         <label class="ml-1 block" for="weight">kg</label>
                     </div>
                 </div>
-                <div class="mt-3 flex">
+                <div class="mt-4 flex">
                     <label class="w-40 h-max block" for="Stimulants">Stimulants <span class="font-bold">:</span></label>
                     <div class="flex flex-col">
                         <div class="flex gap-2 text-[#C4B48A]">
@@ -87,20 +83,92 @@
                 </div>
                 <div class="relative mt-5">
                     <img class="w-[30%] h-[30px]" src="./images/dd-btn.jpg" alt="">
-                    <input class="absolute top-[2px] left-[4%]" type="submit" value="Calculate Death Date">
+                    <input class="calculate absolute top-[2px] left-[4%]" type="submit" value="Calculate Death Date">
                 </div>
             </form>
         </div>
+        <div class="calculatedData w-[37%] border rounded-sm border-zinc-600 my-12 mx-16 absolute right-0 bottom-0 px-6 py-4">
+            <h1 class="yourName paint text-2xl">Your name</h1>
+            <div class="w-full bg-[#bb9944] h-[1px] mb-3"></div>
+            <p class="text-sm">~ The Mechanism computes date in three basis: <span class="text-[#bb9944]">BMI, Average Life Expectancy and Your Date of Birth</span>.</p>
+            <p class="text-sm mt-1">~ You will live almost <span class="totalLive text-[#bb9944]">63 years, 3 months and 25 days</span>.</p>
+            <p class="bmiInfo text-sm mt-1">~ Your BMI is less than 25, which is not good for you.</p>
+            <div class="mt-5">
+                <div class="flex items-center justify-between">
+                    <h3>Your BMI:</h3>
+                    <h2 class="bmi text-[#bb9944]">26</h2>
+                </div>
+                <div class="flex items-center justify-between">
+                    <h3>Predicted Death Date:</h3>
+                    <h2 class="predictedDeathDate text-[#bb9944]">26 april 2043</h2>
+                </div>
+                <div class="flex items-center justify-between">
+                    <h3>Time left:</h3>
+                    <h2 class="timeLeft text-[#bb9944]">18 years, 11 months and 7 days</h2>
+                </div>
+                <div class="flex items-center justify-between">
+                    <h3>Seconds:</h3>
+                    <h2 class="leftSeconds text-[#bb9944]">1111111</h2>
+                </div>
+            </div>
+            <div class="w-full h-4 mt-5 rounded-full bg-transparent border border-zinc-800 shadow shadow-[#4A2204]">
+                <div class="h-full w-full rounded-full overflow-hidden">
+                    <img class="graph w-[70%] h-full rounded-full" src="./images/dd-btn.jpg" alt="">
+                </div>
+            </div>
+            <div class="graph w-full mt-[2px] h-5 bg-transparent flex gap-[38.4px]">
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[2px] h-1 bg-[#bb99449d]"></div>
+                    <p class="text-xs text-[#bb9944]">0</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[2px] h-1 bg-[#bb99449d]"></div>
+                    <p class="text-xs text-[#bb9944]">10</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[2px] h-1 bg-[#bb99449d]"></div>
+                    <p class="text-xs text-[#bb9944]">20</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[2px] h-1 bg-[#bb99449d]"></div>
+                    <p class="text-xs text-[#bb9944]">30</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[2px] h-1 bg-[#bb99449d]"></div>
+                    <p class="text-xs text-[#bb9944]">40</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[2px] h-1 bg-[#bb99449d]"></div>
+                    <p class="text-xs text-[#bb9944]">50</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[2px] h-1 bg-[#bb99449d]"></div>
+                    <p class="text-xs text-[#bb9944]">60</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[2px] h-1 bg-[#bb99449d]"></div>
+                    <p class="text-xs text-[#bb9944]">70</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[2px] h-1 bg-[#bb99449d]"></div>
+                    <p class="text-xs text-[#bb9944]">80</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[2px] h-1 bg-[#bb994477]"></div>
+                    <p class="text-xs text-[#bb9944]">90</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[2px] h-1 bg-[#bb99449d]"></div>
+                    <p class="text-xs text-[#bb9944]">100</p>
+                </div>
+            </div>
+            <div class="w-full h-full mt-7 bg-transparent flex items-center justify-center">
+                <img src="./images/dd-hr.jpg" alt="">
+            </div>
+        </div>
     </div>
 
-    <script>
-        const allowOnlyNumbers = (event) => {
-            if (!/\d/.test(event.key)) {
-                event.preventDefault();
-            }
-        }
-        document.querySelector('.number').addEventListener('keypress', allowOnlyNumbers);
-    </script>
+    <script src="deathDate.js"></script>
 </body>
 
 </html>
