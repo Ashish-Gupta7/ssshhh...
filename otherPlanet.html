@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ssshhh...</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="otherPlanet.css">
+</head>
+
+<body class="relative bg-[#10141D]">
+    <!-- bg-image -->
+    <div class="h-full w-full">
+        <div
+            class="after:bg-[url('./images/body-bg2.svg')] after:contents-[] after:h-[33%] after:opacity-60 after:w-full after:absolute after:bg-repeat pointer-events-none">
+        </div>
+        <div
+            class="after:bg-[url('./images/body-bg2.svg')] after:top-[33%] after:contents-[] after:h-[33%] after:opacity-60 after:w-full after:absolute after:bg-repeat pointer-events-none">
+        </div>
+        <div
+            class="after:bg-[url('./images/body-bg2.svg')] after:top-[66%] after:contents-[] after:h-[34%] after:opacity-60 after:w-full after:absolute after:bg-repeat pointer-events-none">
+        </div>
+
+        <!-- homepage content -->
+        <div class="flex">
+            <!-- left -->
+            <div class="">
+                <h3 class="text-[#3B4E7A] ml-2 text-xs font-bold tracking-[2px]">YOUR AGE ON OTHER PLANETS</h3>
+                <h1 class="quetion text-6xl font-bold w-[38%]">How old would you be on other planets?</h1>
+                <h2 class="w-[37%] text-zinc-300 text-[18px]">Planets circle the Sun at different orbits and different
+                    speeds. They also spin around their axis at a different pace, thus days and years pass faster or
+                    slower there. Would you like to know what's your age on Mars or Pluto? Enter your birthdate to find
+                    out:</h2>
+
+                <!-- form -->
+                <div class="flex items-center gap-2">
+                    <!-- day -->
+                    <div class="dropdown relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[80.5625px]">
+                        <label class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold"
+                            for="birth_date">Day</label>
+                        <div class="flex items-center gap-3 justify-center">
+                            <p class="dd font-semibold">DD</p>
+                            <i class="ri-arrow-down-s-line font-semibold"></i>
+                        </div>
+                        <ul
+                            class="day absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden">
+                            <!-- day li tags -->
+                        </ul>
+                    </div>
+
+                    <!-- month -->
+                    <div class="dropdown relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[87.1875px]">
+                        <label class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold">Months</label>
+                        <div class="flex items-center gap-3 justify-center">
+                            <p class="mm font-semibold">MM</p>
+                            <i class="ri-arrow-down-s-line font-semibold"></i>
+                        </div>
+                        <ul
+                            class="month absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden">
+                            <!-- month li tags -->
+                        </ul>
+                    </div>
+
+                    <!-- year -->
+                    <div class="dropdown relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[94.5375px]">
+                        <label class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold">Years</label>
+                        <div class="flex items-center gap-3 justify-center">
+                            <p class="yyyy font-semibold">YYYY</p>
+                            <i class="ri-arrow-down-s-line font-semibold"></i>
+                        </div>
+                        <ul
+                            class="year absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden">
+                            <!-- year li tags -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- right -->
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="otherPlanet.js"></script>
+</body>
+
+</html>

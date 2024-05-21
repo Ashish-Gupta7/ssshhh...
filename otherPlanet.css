@@ -1,0 +1,39 @@
+@font-face {
+    font-family: paint;
+    src: url(./fonts/PaintDropsRegular-0WaJo.ttf);
+}
+@font-face {
+    font-family: butcherman;
+    src: url(./fonts/Butcherman-Regular.ttf);
+}
+@font-face {
+    font-family: creepster;
+    src: url(./fonts/Creepster-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.paint{
+    font-family: paint;
+}
+.creepster{
+    font-family: creepster;
+}
+.quetion{
+    background: linear-gradient(to bottom left, #4CC0ED, #6FB8DC, #BFA5B5, #F29A9D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+option{
+    width: 400px;
+}
+/* #292622 */
+/* #1D1D1F */
+/* #14171D */
+/* #10141D */
