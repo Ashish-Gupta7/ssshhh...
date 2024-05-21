@@ -2,14 +2,6 @@
     font-family: paint;
     src: url(./fonts/PaintDropsRegular-0WaJo.ttf);
 }
-@font-face {
-    font-family: butcherman;
-    src: url(./fonts/Butcherman-Regular.ttf);
-}
-@font-face {
-    font-family: creepster;
-    src: url(./fonts/Creepster-Regular.ttf);
-}
 *{
     margin: 0;
     padding: 0;
@@ -22,9 +14,13 @@ html, body{
 .paint{
     font-family: paint;
 }
-.creepster{
-    font-family: creepster;
-}
 .ddbg::after{
     background-image: url(./images/dd-logo.jpg);
+}
+.bgImage{
+    background-image: url(./images/dd-btn.jpg);
+}
+
+.spanOpacity span{
+    opacity: 0;
 }
