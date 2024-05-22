@@ -26,10 +26,10 @@
         <!-- homepage content -->
         <div class="flex">
             <!-- left -->
-            <div class="">
+            <div class="py-20 px-28 w-[51.5%]">
                 <h3 class="text-[#3B4E7A] ml-2 text-xs font-bold tracking-[2px]">YOUR AGE ON OTHER PLANETS</h3>
-                <h1 class="quetion text-6xl font-bold w-[38%]">How old would you be on other planets?</h1>
-                <h2 class="w-[37%] text-zinc-300 text-[18px]">Planets circle the Sun at different orbits and different
+                <h1 class="quetion text-[56px] leading-[60px] pb-7 font-bold">How old would you be on other planets?</h1>
+                <h2 class="text-zinc-300 text-[18px] mb-5">Planets circle the Sun at different orbits and different
                     speeds. They also spin around their axis at a different pace, thus days and years pass faster or
                     slower there. Would you like to know what's your age on Mars or Pluto? Enter your birthdate to find
                     out:</h2>
@@ -37,22 +37,26 @@
                 <!-- form -->
                 <div class="flex items-center gap-2">
                     <!-- day -->
-                    <div class="dropdown relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[80.5625px]">
-                        <label class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold"
+                    <div
+                        class="dropdownDay relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[80.5625px]">
+                        <label
+                            class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold"
                             for="birth_date">Day</label>
                         <div class="flex items-center gap-3 justify-center">
                             <p class="dd font-semibold">DD</p>
                             <i class="ri-arrow-down-s-line font-semibold"></i>
                         </div>
                         <ul
-                            class="day absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden">
+                            class="day max-h-[300px] overflow-y-auto absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden">
                             <!-- day li tags -->
                         </ul>
                     </div>
 
                     <!-- month -->
-                    <div class="dropdown relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[87.1875px]">
-                        <label class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold">Months</label>
+                    <div
+                        class="dropdownMonth relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[87.1875px]">
+                        <label
+                            class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold">Months</label>
                         <div class="flex items-center gap-3 justify-center">
                             <p class="mm font-semibold">MM</p>
                             <i class="ri-arrow-down-s-line font-semibold"></i>
@@ -64,17 +68,22 @@
                     </div>
 
                     <!-- year -->
-                    <div class="dropdown relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[94.5375px]">
-                        <label class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold">Years</label>
+                    <div
+                        class="dropdownYear relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[94.5375px]">
+                        <label
+                            class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold">Years</label>
                         <div class="flex items-center gap-3 justify-center">
                             <p class="yyyy font-semibold">YYYY</p>
                             <i class="ri-arrow-down-s-line font-semibold"></i>
                         </div>
                         <ul
-                            class="year absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden">
+                            class="year max-h-[300px] overflow-y-auto overflow-x-hidden absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden">
                             <!-- year li tags -->
                         </ul>
                     </div>
+
+                    <!-- submit -->
+                    <button class="submitDob bg-[#886D27] px-7 text-center font-bold py-[15px] rounded-full">GO!</button>
                 </div>
             </div>
 
@@ -85,7 +94,9 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="otherPlanet.js"></script>
 </body>
 

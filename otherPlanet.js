@@ -1,6 +1,6 @@
 // month, day and year innerHTML
 // month
-var month = document.querySelector(".dropdown .month");
+var month = document.querySelector(".dropdownMonth .month");
 var monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 var monthli = `<li class="disabled:cursor-not-allowed mb-3 w-full  font-bold">Months</li>`;
@@ -16,10 +16,10 @@ for(let i = 1; i <= 31; i++) {
     daysInArray.push(i);
 }
 
-var day = document.querySelector(".dropdown .day");
+var day = document.querySelector(".dropdownDay .day");
 var dayli = `<li class="disabled:cursor-not-allowed mb-3 w-full  font-bold">Days</li>`;
 daysInArray.forEach(elm => {
-    dayli = dayli + `<li class="monthNameli relative opacity-0 mt-[2px] hover:before:bg-[#1e263566] before:contents-[] before:absolute before:left-[-15.5%] before:w-[131%] before:h-full before:py-2">${elm}</li>`;
+    dayli = dayli + `<li class="dayNameli relative opacity-0 mt-[2px] hover:before:bg-[#1e263566] before:contents-[] before:absolute before:left-[-15.5%] before:w-[131%] before:h-full before:py-2">${elm}</li>`;
 });
 day.innerHTML = dayli;
 
@@ -30,37 +30,71 @@ for(let i = 1920; i <= new Date().getFullYear(); i++) {
     yearsInArray.push(i);
 }
 
-var year = document.querySelector(".dropdown .year");
+var year = document.querySelector(".dropdownYear .year");
 var yearli = `<li class="disabled:cursor-not-allowed mb-3 w-full  font-bold">Years</li>`;
 yearsInArray.forEach(elm => {
-    yearli = yearli + `<li class="monthNameli relative opacity-0 mt-[2px] hover:before:bg-[#1e263566] before:contents-[] before:absolute before:left-[-15.5%] before:w-[131%] before:h-full before:py-2">${elm}</li>`
+    yearli = yearli + `<li class="yearNameli relative mt-[2px] opacity-0 hover:before:bg-[#1e263566] before:contents-[] before:absolute before:left-[-15.5%] before:w-[131%] before:h-full before:py-2">${elm}</li>`
 });
-
-console.log(yearli);
 year.innerHTML = yearli;
 
 
 // dropdown month, day & year
-var dropDown = document.querySelectorAll(".dropdown");
-dropDown.forEach(elm => {
-    elm.addEventListener("mouseenter", () => {
-        var tl1 = gsap.timeline();
-        tl1.to(month, {
-            display: "block"
-        });
-        tl1.to(".month li", {
-            stagger: .1,
-            opacity: 1
-        })
+// month
+var dropdownMonth = document.querySelector(".dropdownMonth");
+dropdownMonth.addEventListener("mouseover", () => {
+    var m1 = gsap.timeline();
+    m1.to(month, {
+        display: "block"
     });
-    elm.addEventListener("mouseleave", () => {
-        gsap.to(month, {
-            delay: -1,
-            display: "none"
-        });
+    m1.to(".month li", {
+        stagger: .04,
+        opacity: 1
+    })
+});
+dropdownMonth.addEventListener("mouseout", () => {
+    gsap.to(month, {
+        display: "none"
     });
 });
 
+// day
+var dropdownDay = document.querySelector(".dropdownDay");
+dropdownDay.addEventListener("mouseover", () => {
+    var d1 = gsap.timeline();
+    d1.to(day, {
+        display: "block"
+    });
+    d1.to(".day li", {
+        stagger: .02,
+        opacity: 1
+    });
+});
+dropdownDay.addEventListener("mouseout", () => {
+    gsap.to(day, {
+        display: "none"
+    });
+});
+
+// year
+var dropdownYear = document.querySelector(".dropdownYear");
+dropdownYear.addEventListener("mouseover", () => {
+    var y1 = gsap.timeline();
+    y1.to(year, {
+        display: "block"
+    });
+    y1.to(".year li", {
+        stagger: .02,
+        opacity: 1
+    })
+});
+dropdownYear.addEventListener("mouseout", () => {
+    gsap.to(year, {
+        display: "none"
+    });
+});
+
+// display the selected dropdown month, day and year
+// month
 const monthNamesArray = [
     {name: "January", number: "01"},
     {name: "February", number: "02"},
@@ -77,18 +111,46 @@ const monthNamesArray = [
 ];
 
 var monthNameli = document.querySelectorAll(".month .monthNameli");
-
+var mm = document.querySelector(".mm");
 monthNameli.forEach(elm => {
     elm.addEventListener("click", (dets) => {
         let clickedMonth = dets.target.innerHTML;
-
         let monthNum = monthNamesArray.find(elm => {
             return elm.name === clickedMonth; 
         });
         if(monthNum) monthNum = monthNum.number;
-        document.querySelector(".mm").innerHTML = monthNum
+        mm.innerHTML = monthNum;
     });
 });
 
-
 // day
+var dayNameli = document.querySelectorAll(".day .dayNameli");
+var dd = document.querySelector(".dd");
+dayNameli.forEach(elm => {
+    elm.addEventListener("click", (dets) => {
+        let clickedDay = dets.target.innerHTML;
+        if(clickedDay <= 9) {
+            clickedDay = "0" + clickedDay;
+        }
+        dd.innerHTML = clickedDay;
+    });
+});
+
+// year
+var yearNameli = document.querySelectorAll(".year .yearNameli");
+var yyyy = document.querySelector(".yyyy");
+yearNameli.forEach(elm => {
+    elm.addEventListener("click", (dets) => {
+        let clickedYear = dets.target.innerHTML;
+        yyyy.innerHTML = clickedYear;
+    });
+});
+
+// submitted dob
+
+// add conditions for empty submission.
+var submitDob = document.querySelector(".submitDob");
+submitDob.addEventListener("click", (dets) => {
+    var earthDay = dd.innerText;
+    console.log(earthDay);
+});

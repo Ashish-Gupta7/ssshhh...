@@ -37,3 +37,13 @@ option{
 /* #1D1D1F */
 /* #14171D */
 /* #10141D */
+
+.day::-webkit-scrollbar,
+.year::-webkit-scrollbar {
+    background: #3b4e7a17;
+}
+
+.day::-webkit-scrollbar-thumb,
+.year::-webkit-scrollbar-thumb {
+    background: #3B4E7A;
+}
