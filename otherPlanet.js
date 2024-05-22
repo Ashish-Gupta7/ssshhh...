@@ -9,29 +9,53 @@ monthName.forEach(elm => {
 });
 month.innerHTML = monthli;
 
+
 // day
 var daysInArray = [];
 for(let i = 1; i <= 31; i++) {
     daysInArray.push(i);
 }
-console.log(daysInArray);
+
+var day = document.querySelector(".dropdown .day");
+var dayli = `<li class="disabled:cursor-not-allowed mb-3 w-full  font-bold">Days</li>`;
+daysInArray.forEach(elm => {
+    dayli = dayli + `<li class="monthNameli relative opacity-0 mt-[2px] hover:before:bg-[#1e263566] before:contents-[] before:absolute before:left-[-15.5%] before:w-[131%] before:h-full before:py-2">${elm}</li>`;
+});
+day.innerHTML = dayli;
 
 
+// year
+var yearsInArray = [];
+for(let i = 1920; i <= new Date().getFullYear(); i++) {
+    yearsInArray.push(i);
+}
 
+var year = document.querySelector(".dropdown .year");
+var yearli = `<li class="disabled:cursor-not-allowed mb-3 w-full  font-bold">Years</li>`;
+yearsInArray.forEach(elm => {
+    yearli = yearli + `<li class="monthNameli relative opacity-0 mt-[2px] hover:before:bg-[#1e263566] before:contents-[] before:absolute before:left-[-15.5%] before:w-[131%] before:h-full before:py-2">${elm}</li>`
+});
+
+console.log(yearli);
+year.innerHTML = yearli;
+
+
+// dropdown month, day & year
 var dropDown = document.querySelectorAll(".dropdown");
 dropDown.forEach(elm => {
-    elm.addEventListener("mouseover", () => {
+    elm.addEventListener("mouseenter", () => {
         var tl1 = gsap.timeline();
         tl1.to(month, {
             display: "block"
         });
         tl1.to(".month li", {
-            stagger: .2,
+            stagger: .1,
             opacity: 1
         })
     });
-    elm.addEventListener("mouseout", () => {
+    elm.addEventListener("mouseleave", () => {
         gsap.to(month, {
+            delay: -1,
             display: "none"
         });
     });
