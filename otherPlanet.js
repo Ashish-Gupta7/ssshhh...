@@ -149,8 +149,28 @@ yearNameli.forEach(elm => {
 // submitted dob
 
 // add conditions for empty submission.
+
+var earthDay = dd.textContent;
+console.log(earthDay);
+
+earthDay.addEventListener("change", () => {
+    console.log(earthDay);
+});
+
+
 var submitDob = document.querySelector(".submitDob");
 submitDob.addEventListener("click", (dets) => {
-    var earthDay = dd.innerText;
-    console.log(earthDay);
+    var earthMonth = mm.innerText;
+    var earthYear = yyyy.innerText;
+    if(earthDay === "DD" && earthMonth === "MM" && earthYear === "YYYY") {
+        console.log("hhhh");
+    }
+    else{
+        submitDob.addEventListener("mouseenter", () => {
+            submitDob.style.backgroundColor = "#5CCBE9";
+        });
+        submitDob.addEventListener("mouseleave", () => {
+            submitDob.style.backgroundColor = "#886D27";
+        });
+    }
 });
