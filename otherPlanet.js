@@ -12,7 +12,7 @@ month.innerHTML = monthli;
 
 // day
 var daysInArray = [];
-for(let i = 1; i <= 31; i++) {
+for (let i = 1; i <= 31; i++) {
     daysInArray.push(i);
 }
 
@@ -26,7 +26,7 @@ day.innerHTML = dayli;
 
 // year
 var yearsInArray = [];
-for(let i = 1920; i <= new Date().getFullYear(); i++) {
+for (let i = 1920; i <= new Date().getFullYear(); i++) {
     yearsInArray.push(i);
 }
 
@@ -96,18 +96,18 @@ dropdownYear.addEventListener("mouseout", () => {
 // display the selected dropdown month, day and year
 // month
 const monthNamesArray = [
-    {name: "January", number: "01"},
-    {name: "February", number: "02"},
-    {name: "March", number: "03"},
-    {name: "April", number: "04"},
-    {name: "May", number: "05"},
-    {name: "June", number: "06"},
-    {name: "July", number: "07"},
-    {name: "August", number: "08"},
-    {name: "September", number: "09"},
-    {name: "October", number: 10},
-    {name: "November", number: 11},
-    {name: "December", number: 12}
+    { name: "January", number: "01" },
+    { name: "February", number: "02" },
+    { name: "March", number: "03" },
+    { name: "April", number: "04" },
+    { name: "May", number: "05" },
+    { name: "June", number: "06" },
+    { name: "July", number: "07" },
+    { name: "August", number: "08" },
+    { name: "September", number: "09" },
+    { name: "October", number: 10 },
+    { name: "November", number: 11 },
+    { name: "December", number: 12 }
 ];
 
 var monthNameli = document.querySelectorAll(".month .monthNameli");
@@ -116,9 +116,9 @@ monthNameli.forEach(elm => {
     elm.addEventListener("click", (dets) => {
         let clickedMonth = dets.target.innerHTML;
         let monthNum = monthNamesArray.find(elm => {
-            return elm.name === clickedMonth; 
+            return elm.name === clickedMonth;
         });
-        if(monthNum) monthNum = monthNum.number;
+        if (monthNum) monthNum = monthNum.number;
         mm.innerHTML = monthNum;
     });
 });
@@ -129,7 +129,7 @@ var dd = document.querySelector(".dd");
 dayNameli.forEach(elm => {
     elm.addEventListener("click", (dets) => {
         let clickedDay = dets.target.innerHTML;
-        if(clickedDay <= 9) {
+        if (clickedDay <= 9) {
             clickedDay = "0" + clickedDay;
         }
         dd.innerHTML = clickedDay;
@@ -150,22 +150,22 @@ yearNameli.forEach(elm => {
 
 // add conditions for empty submission.
 
-var earthDay = dd.textContent;
-console.log(earthDay);
+// console.log(earthDay);
 
-earthDay.addEventListener("change", () => {
-    console.log(earthDay);
-});
+// earthDay.addEventListener("change", () => {
+//     console.log(earthDay);
+// });
 
 
 var submitDob = document.querySelector(".submitDob");
 submitDob.addEventListener("click", (dets) => {
-    var earthMonth = mm.innerText;
-    var earthYear = yyyy.innerText;
-    if(earthDay === "DD" && earthMonth === "MM" && earthYear === "YYYY") {
-        console.log("hhhh");
+    var earthDay = dd.textContent;
+    var earthMonth = mm.textContent;
+    var earthYear = yyyy.textContent;
+    if (earthDay === "DD" || earthMonth === "MM" || earthYear === "YYYY") {
+        alert("Please! First You Select Your DOB.");
     }
-    else{
+    else {
         submitDob.addEventListener("mouseenter", () => {
             submitDob.style.backgroundColor = "#5CCBE9";
         });
