@@ -10,91 +10,107 @@
     <link rel="stylesheet" href="otherPlanet.css">
 </head>
 
-<body class="relative bg-[#10141D]">
+<body class="relative overflow-hidden bg-[#10141D]">
     <!-- bg-image -->
-    <div class="h-full w-full">
-        <div
-            class="after:bg-[url('./images/body-bg2.svg')] after:contents-[] after:h-[33%] after:opacity-60 after:w-full after:absolute after:bg-repeat pointer-events-none">
-        </div>
-        <div
-            class="after:bg-[url('./images/body-bg2.svg')] after:top-[33%] after:contents-[] after:h-[33%] after:opacity-60 after:w-full after:absolute after:bg-repeat pointer-events-none">
-        </div>
-        <div
-            class="after:bg-[url('./images/body-bg2.svg')] after:top-[66%] after:contents-[] after:h-[34%] after:opacity-60 after:w-full after:absolute after:bg-repeat pointer-events-none">
-        </div>
+    <div
+        class="after:bg-[url('./images/body-bg2.svg')] after:contents-[] after:h-[33%] after:opacity-60 after:w-full after:absolute after:bg-repeat pointer-events-none">
+    </div>
+    <div
+        class="after:bg-[url('./images/body-bg2.svg')] after:top-[33%] after:contents-[] after:h-[33%] after:opacity-60 after:w-full after:absolute after:bg-repeat pointer-events-none">
+    </div>
+    <div
+        class="after:bg-[url('./images/body-bg2.svg')] after:top-[66%] after:contents-[] after:h-[34%] after:opacity-60 after:w-full after:absolute after:bg-repeat pointer-events-none">
+    </div>
+    <div class="h-full w-full flex">
 
         <!-- homepage content -->
-        <div class="flex">
-            <!-- left -->
-            <div class="py-20 px-28 w-[51.5%]">
-                <h3 class="text-[#3B4E7A] ml-2 text-xs font-bold tracking-[2px]">YOUR AGE ON OTHER PLANETS</h3>
-                <h1 class="quetion text-[56px] leading-[60px] pb-7 font-bold">How old would you be on other planets?
-                </h1>
-                <h2 class="text-zinc-300 text-[18px] mb-5">Planets circle the Sun at different orbits and different
-                    speeds. They also spin around their axis at a different pace, thus days and years pass faster or
-                    slower there. Would you like to know what's your age on Mars or Pluto? Enter your birthdate to find
-                    out:</h2>
-
-                <!-- form -->
-                <div class="flex items-center gap-2">
-                    <!-- day -->
-                    <div
-                        class="dropdownDay relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[80.5625px]">
-                        <label
-                            class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold"
-                            for="birth_date">Day</label>
-                        <div class="flex items-center gap-3 justify-center">
-                            <p class="dd font-semibold">DD</p>
-                            <i class="ri-arrow-down-s-line font-semibold"></i>
+        <div class="flex home_content">
+                <!-- left -->
+                <div class="left_content w-[51.5%] py-20 px-28">
+                    <!-- left top -->
+                    <div class=" relative">
+                        <h3 class="text-[#3B4E7A] ml-2 text-xs font-bold tracking-[2px]">YOUR AGE ON OTHER PLANETS</h3>
+                        <h1 class="quetion text-[56px] leading-[60px] pb-7 font-bold">How old would you be on other planets?
+                        </h1>
+                        <h2 class="text-zinc-300 text-[18px] mb-5">Planets circle the Sun at different orbits and different
+                            speeds. They also spin around their axis at a different pace, thus days and years pass faster or
+                            slower there. Would you like to know what's your age on Mars or Pluto? Enter your birthdate to find
+                            out:</h2>
+        
+                        <!-- form -->
+                        <div class="flex items-center gap-2">
+                            <!-- day -->
+                            <div
+                                class="dropdownDay relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[80.5625px]">
+                                <label
+                                    class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold"
+                                    for="birth_date">Day</label>
+                                <div class="flex items-center gap-3 justify-center">
+                                    <p class="dd font-semibold">DD</p>
+                                    <i class="ri-arrow-down-s-line font-semibold"></i>
+                                </div>
+                                <ul
+                                    class="day max-h-[200px] overflow-y-auto absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden bg-[#10141D]">
+                                    <!-- day li tags -->
+                                </ul>
+                            </div>
+        
+                            <!-- month -->
+                            <div
+                                class="dropdownMonth relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[87.1875px]">
+                                <label
+                                    class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold">Months</label>
+                                <div class="flex items-center gap-3 justify-center">
+                                    <p class="mm font-semibold">MM</p>
+                                    <i class="ri-arrow-down-s-line font-semibold"></i>
+                                </div>
+                                <ul
+                                    class="month absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden bg-[#10141D]">
+                                    <!-- month li tags -->
+                                </ul>
+                            </div>
+        
+                            <!-- year -->
+                            <div
+                                class="dropdownYear relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[94.5375px]">
+                                <label
+                                    class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold">Years</label>
+                                <div class="flex items-center gap-3 justify-center">
+                                    <p class="yyyy font-semibold">YYYY</p>
+                                    <i class="ri-arrow-down-s-line font-semibold"></i>
+                                </div>
+                                <ul
+                                    class="year max-h-[240px] overflow-y-auto overflow-x-hidden absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden bg-[#10141D]">
+                                    <!-- year li tags -->
+                                </ul>
+                            </div>
+        
+                            <!-- submit -->
+                            <button
+                                class="submitDob bg-[#886D27] px-7 text-center font-bold py-[15px] rounded-full">GO!</button>
                         </div>
-                        <ul
-                            class="day max-h-[200px] overflow-y-auto absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden">
-                            <!-- day li tags -->
-                        </ul>
                     </div>
-
-                    <!-- month -->
-                    <div
-                        class="dropdownMonth relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[87.1875px]">
-                        <label
-                            class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold">Months</label>
-                        <div class="flex items-center gap-3 justify-center">
-                            <p class="mm font-semibold">MM</p>
-                            <i class="ri-arrow-down-s-line font-semibold"></i>
-                        </div>
-                        <ul
-                            class="month absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden">
-                            <!-- month li tags -->
-                        </ul>
-                    </div>
-
-                    <!-- year -->
-                    <div
-                        class="dropdownYear relative border border-zinc-700 text-zinc-400 px-[14px] pt-[10px] pb-[14px] flex items-center justify-center gap-1 rounded-md hover:bg-[#1E2229] w-[94.5375px]">
-                        <label
-                            class="absolute -top-[7px] bg-[#10141D] px-1 rounded-md left-[9px] text-[9px] font-semibold">Years</label>
-                        <div class="flex items-center gap-3 justify-center">
-                            <p class="yyyy font-semibold">YYYY</p>
-                            <i class="ri-arrow-down-s-line font-semibold"></i>
-                        </div>
-                        <ul
-                            class="year max-h-[240px] overflow-y-auto overflow-x-hidden absolute top-14 w-full px-[10px] py-[10px] rounded-md border-zinc-700 border text-xs hidden">
-                            <!-- year li tags -->
-                        </ul>
-                    </div>
-
-                    <!-- submit -->
-                    <button
-                        class="submitDob bg-[#886D27] px-7 text-center font-bold py-[15px] rounded-full">GO!</button>
+        
+                    <!-- left bottom -->
+                    <img class="absolute -z-10 -bottom-[195%] -left-[65%]  filter drop-shadow-[10px_10px_90px_#eca56752]" height="100%" width="100%"
+                        src="./images/op-jupiter.svg" alt="">
+                    <img class="absolute -z-10 left-[30%] bottom-14" src="./images/op-satellite.svg" alt="">
                 </div>
-            </div>
+    
+                <!-- right -->
+                <div class="right_content">
+                    <img class="astro absolute right-[95px] -top-2" src="./images/op-astronaut.svg" alt="">   
+                    <img class="neptune absolute h-40 top-10 right-0" src="./images/op-neptune.svg" alt="">
+                </div>
+        </div>
 
-            <!-- right -->
-            <div>
-
-            </div>
+        
+        <!-- after submit -->
+        <div class="after_submit w-full h-full hidden opacity-0">
+            <!-- another_folder -->
         </div>
     </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="

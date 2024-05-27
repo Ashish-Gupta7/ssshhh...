@@ -146,31 +146,54 @@ yearNameli.forEach(elm => {
     });
 });
 
-// submitted dob
 
-// add conditions for empty submission.
-
-// console.log(earthDay);
-
-// earthDay.addEventListener("change", () => {
-//     console.log(earthDay);
-// });
-
-
+var afterSubmit = document.querySelector(".after_submit");
 var submitDob = document.querySelector(".submitDob");
 submitDob.addEventListener("click", (dets) => {
-    var earthDay = dd.textContent;
-    var earthMonth = mm.textContent;
-    var earthYear = yyyy.textContent;
+    var earthDay = dd.innerHTML;
+    var earthMonth = mm.innerHTML;
+    var earthYear = yyyy.innerHTML;
     if (earthDay === "DD" || earthMonth === "MM" || earthYear === "YYYY") {
         alert("Please! First You Select Your DOB.");
     }
     else {
-        submitDob.addEventListener("mouseenter", () => {
-            submitDob.style.backgroundColor = "#5CCBE9";
+        var slide = gsap.timeline();
+        slide.to(".left_content", {
+            delay: .2,
+            duration: 1,
+            x: -700
+        }, "same");
+        slide.to(".astro", {
+            delay: .2,
+            duration: .8,
+            x: -1500
+        }, "same");
+        slide.to(".neptune", {
+            delay: .4,
+            duration: 1.2,
+            x: -2000
+        }, "same");
+        slide.to(".home_content", {
+            display: "none"
+        }, "page");
+        slide.to(afterSubmit, {
+            display: "block"
+        }, "page");
+        slide.to(afterSubmit, {
+            opacity: 1
         });
-        submitDob.addEventListener("mouseleave", () => {
-            submitDob.style.backgroundColor = "#886D27";
-        });
+        slide.from(".after_submit img", {
+            x: 1500
+        })
     }
+
 });
+
+// window.onbeforeunload = function() {
+//     // // Initial state reset
+//     // dd.innerHTML = "DD";
+//     // mm.innerHTML = "MM";
+//     // yyyy.innerHTML = "YYYY";
+//     // gsap.to(".left_content", { x: 0 });
+//     afterSubmit.style.display = "none";
+// };
