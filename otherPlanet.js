@@ -225,7 +225,7 @@ submitDob.addEventListener("click", (dets) => {
                     duration: .8,
                     x: -1500
                 }, "same");
-                slide.to(".neptune", {
+                slide.to(".nept", {
                     delay: .4,
                     duration: 1.2,
                     x: -2000
@@ -302,8 +302,6 @@ const forNextBirthday = (date) => {
         nextBirthday = new Date(nYear, bMonth, bDate);
     }
 
-    console.log(nextBirthday);
-
     // Calculate the difference in time
     const differenceInTime = cDay.getTime() - bDay.getTime();
 
@@ -330,8 +328,16 @@ const forNextBirthday = (date) => {
         return `${formattedDay} ${monthNames[fmonth]} ${fyear}`;
     }
 
+    // earth
+    var earthAge = document.querySelector(".earth_age");
+    var earthDays = document.querySelector(".earth_days");
+    var earthDate = document.querySelector(".earth_date");
+    earthAge.innerHTML = fixedAge;
+    earthDays.innerHTML = fixedDays;
+    earthDate.innerHTML = formateAnyDate(new Date(nextBirthday));
+
     // mercury
-    const ageOnMercury = Math.floor(fixedDays / 88);
+    const ageOnMercury = fixedDays / 88;
     const totalDaysOnMercury = ageOnMercury * 88;
     const nextBirthdayOnMercuryInDays = 88 - (fixedDays - totalDaysOnMercury);
     const nextBirthdayOnMercury = formateAnyDate(new Date((cDay.setDate(cDay.getDate() + nextBirthdayOnMercuryInDays))));
@@ -339,7 +345,213 @@ const forNextBirthday = (date) => {
     var mercuryAge = document.querySelector(".mercury_age");
     var mercuryDays = document.querySelector(".mercury_days");
     var mercuryDate = document.querySelector(".mercury_date");
-    mercuryAge.innerHTML = ageOnMercury;
-    mercuryDays.innerHTML = nextBirthdayOnMercuryInDays;
+    mercuryAge.innerHTML = ageOnMercury.toFixed(1);
+    mercuryDays.innerHTML = nextBirthdayOnMercuryInDays.toFixed(0);
     mercuryDate.innerHTML = nextBirthdayOnMercury;
+    
+    // venus
+    const ageOnVenus = fixedDays / 224.7;
+    const totalDaysOnVenus = ageOnVenus * 224.7;
+    const nextBirthdayOnVenusInDays = 224.7 - (fixedDays - totalDaysOnVenus);
+    const nextBirthdayOnVenus = formateAnyDate(new Date((cDay.setDate(cDay.getDate() + nextBirthdayOnVenusInDays))));
+
+    var venusAge = document.querySelector(".venus_age");
+    var venusDays = document.querySelector(".venus_days");
+    var venusDate = document.querySelector(".venus_date");
+    venusAge.innerHTML = ageOnVenus.toFixed(1);
+    venusDays.innerHTML = nextBirthdayOnVenusInDays.toFixed(0);
+    venusDate.innerHTML = nextBirthdayOnVenus;
+
+    // mars
+    const ageOnMars = fixedDays / 687;
+    const totalDaysOnMars = ageOnMars * 687;
+    const nextBirthdayOnMarsInDays = 687 - (fixedDays - totalDaysOnMars);
+    const nextBirthdayOnMars = formateAnyDate(new Date((cDay.setDate(cDay.getDate() + nextBirthdayOnMarsInDays))));
+
+    var marsAge = document.querySelector(".mars_age");
+    var marsDays = document.querySelector(".mars_days");
+    var marsDate = document.querySelector(".mars_date");
+    marsAge.innerHTML = ageOnMars.toFixed(1);
+    marsDays.innerHTML = nextBirthdayOnMarsInDays.toFixed(0);
+    marsDate.innerHTML = nextBirthdayOnMars;
+
+    // jupiter
+    const orbitalPeriodJupiter = 11.86 * 365.25;
+    const ageOnJupiter = fixedDays / orbitalPeriodJupiter;
+    const totalDaysOnJupiter = ageOnJupiter * orbitalPeriodJupiter;
+    const nextBirthdayOnJupiterInDays = orbitalPeriodJupiter - (fixedDays - totalDaysOnJupiter);
+    const nextBirthdayOnJupiter = formateAnyDate(new Date((cDay.setDate(cDay.getDate() + nextBirthdayOnJupiterInDays))));
+
+    var jupiterAge = document.querySelector(".jupiter_age");
+    var jupiterDays = document.querySelector(".jupiter_days");
+    var jupiterDate = document.querySelector(".jupiter_date");
+    jupiterAge.innerHTML = ageOnJupiter.toFixed(1);
+    jupiterDays.innerHTML = nextBirthdayOnJupiterInDays.toFixed(0);
+    jupiterDate.innerHTML = nextBirthdayOnJupiter;
+
+    // saturn
+    const orbitalPeriodSaturn = 29.46 * 365.25;
+    const ageOnSaturn = fixedDays / orbitalPeriodSaturn;
+    const totalDaysOnSaturn = ageOnSaturn * orbitalPeriodSaturn;
+    const nextBirthdayOnSaturnInDays = orbitalPeriodSaturn - (fixedDays - totalDaysOnSaturn);
+    const nextBirthdayOnSaturn = formateAnyDate(new Date((cDay.setDate(cDay.getDate() + nextBirthdayOnSaturnInDays))));
+
+    var saturnAge = document.querySelector(".saturn_age");
+    var saturnDays = document.querySelector(".saturn_days");
+    var saturnDate = document.querySelector(".saturn_date");
+    saturnAge.innerHTML = ageOnSaturn.toFixed(1);
+    saturnDays.innerHTML = nextBirthdayOnSaturnInDays.toFixed(0);
+    saturnDate.innerHTML = nextBirthdayOnSaturn;
+
+    // uranus
+    const orbitalPeriodUranus = 84 * 365.25;
+    const ageOnUranus = fixedDays / orbitalPeriodUranus;
+    const totalDaysOnUranus = ageOnUranus * orbitalPeriodUranus;
+    const nextBirthdayOnUranusInDays = orbitalPeriodUranus - (fixedDays - totalDaysOnUranus);
+    const nextBirthdayOnUranus = formateAnyDate(new Date((cDay.setDate(cDay.getDate() + nextBirthdayOnUranusInDays))));
+
+    var uranusAge = document.querySelector(".uranus_age");
+    var uranusDays = document.querySelector(".uranus_days");
+    var uranusDate = document.querySelector(".uranus_date");
+    uranusAge.innerHTML = ageOnUranus.toFixed(1);
+    uranusDays.innerHTML = nextBirthdayOnUranusInDays.toFixed(0);
+    uranusDate.innerHTML = nextBirthdayOnUranus;
+
+    // neptune
+    const orbitalPeriodNeptune = 164.8 * 365.25;
+    const ageOnNeptune = fixedDays / orbitalPeriodNeptune;
+    const totalDaysOnNeptune = ageOnNeptune * orbitalPeriodNeptune;
+    const nextBirthdayOnNeptuneInDays = orbitalPeriodNeptune - (fixedDays - totalDaysOnNeptune);
+    const nextBirthdayOnNeptune = formateAnyDate(new Date((cDay.setDate(cDay.getDate() + nextBirthdayOnNeptuneInDays))));
+
+    var neptuneAge = document.querySelector(".neptune_age");
+    var neptuneDays = document.querySelector(".neptune_days");
+    var neptuneDate = document.querySelector(".neptune_date");
+    neptuneAge.innerHTML = ageOnNeptune.toFixed(1);
+    neptuneDays.innerHTML = nextBirthdayOnNeptuneInDays.toFixed(0);
+    neptuneDate.innerHTML = nextBirthdayOnNeptune;
 }
+
+// scrollTrigger is not working ?
+// gsap.from(".venus .venus_planet .stagger", {
+//     y: 200,
+//     color: "red",
+//     duration: 2,
+//     stagger: .3,
+//     opacity: 0,
+//     scrollTrigger: {
+//         trigger: ".venus_planet",
+//         scroller: "body",
+//         // scrub: 3,
+//         start: "top 90%",
+//         end: "bottom 100%",
+//         markers: true
+//     }
+// });
+// gsap.from(".earth .stagger", {
+//     y: 200,
+//     duration: 2,
+//     stagger: .3,
+//     opacity: 0,
+//     scrollTrigger: {
+//         trigger: ".earth_planet",
+//         scroller: ".main",
+//         scrub: 3,
+//         start: "top 90%",
+//         end: "bottom 100%",
+//         // markers: true
+//     }
+// });
+// gsap.from(".mars .stagger", {
+//     y: 200,
+//     duration: 2,
+//     stagger: .3,
+//     opacity: 0,
+//     scrollTrigger: {
+//         trigger: ".mars_planet",
+//         scroller: ".main",
+//         scrub: 3,
+//         start: "top 90%",
+//         end: "bottom 100%",
+//         // markers: true
+//     }
+// });
+// gsap.from(".jupiter .stagger", {
+//     y: 200,
+//     duration: 2,
+//     stagger: .3,
+//     opacity: 0,
+//     scrollTrigger: {
+//         trigger: ".jupiter_planet",
+//         scroller: ".main",
+//         scrub: 3,
+//         start: "top 90%",
+//         end: "bottom 100%",
+//         // markers: true
+//     }
+// });
+// gsap.from(".saturn .stagger", {
+//     y: 200,
+//     duration: 2,
+//     stagger: .3,
+//     opacity: 0,
+//     scrollTrigger: {
+//         trigger: ".saturn_planet",
+//         scroller: ".main",
+//         scrub: 3,
+//         start: "top 90%",
+//         end: "bottom 100%",
+//         // markers: true
+//     }
+// });
+// gsap.from(".uranus .stagger", {
+//     y: 200,
+//     duration: 2,
+//     stagger: .3,
+//     opacity: 0,
+//     scrollTrigger: {
+//         trigger: ".uranus_planet",
+//         scroller: ".main",
+//         scrub: 3,
+//         start: "top 90%",
+//         end: "bottom 100%",
+//         // markers: true
+//     }
+// });
+// gsap.from(".neptune .stagger", {
+//     y: 200,
+//     duration: 2,
+//     stagger: .3,
+//     opacity: 0,
+//     scrollTrigger: {
+//         trigger: ".neptune_planet",
+//         scroller: ".main",
+//         scrub: 3,
+//         start: "top 90%",
+//         end: "bottom 100%",
+//         // markers: true
+//     }
+// });
+
+const paragraphs = document.querySelectorAll(".planetData_hoverEffect p");
+paragraphs.forEach(elm => {
+    elm.addEventListener("mouseover", (dets) => {
+        const hoveredElem = dets.target;
+        paragraphs.forEach(elm => {
+            if (elm !== hoveredElem) {
+                gsap.to(elm, {
+                    opacity: "0.5"
+                });
+            }
+        });
+    });
+});
+paragraphs.forEach(elm => {
+    elm.addEventListener("mouseout", (dets) => {
+        paragraphs.forEach(elm => {
+            gsap.to(elm, {
+                opacity: 1
+            });
+        });
+    });
+});
