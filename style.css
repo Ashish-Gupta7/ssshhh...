@@ -70,3 +70,11 @@ html, body{
     background-clip: text;
     color: transparent;
 }
+
+@media (max-width: 600px) {
+    #main, #main::before, #main::after{
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+}

@@ -11,28 +11,25 @@
 </head>
 
 <body class="caret-[#bb9944]">
-    <div class="ddbg selection:text-red-600 w-full min-h-full bg-black text-[#C4B48A] py-12 px-20 flex gap-20 after:contents-[] after:h-full after:w-full after:absolute after:top-0 after:left-0 after:bg-no-repeat after:bg-center after:bg-contain after:opacity-[.05] after:pointer-events-none relative">
+    <div class="ddbg selection:text-red-600 w-full min-h-full bg-black text-[#C4B48A] py-12 px-20 flex gap-20 after:contents-[] after:h-full after:w-full after:absolute after:top-0 after:left-0 after:bg-no-repeat after:bg-center after:bg-contain after:opacity-[.05] after:pointer-events-none relative max-[600px]:overflow-hidden max-[600px]:px-2 max-[600px]:block max-[600px]:py-4">
 
         <!-- left logo & links -->
-        <div class="w-[18%]">
-            <img class="" src="./images/dd-logo.jpg" alt="">
-            <div class="flex flex-col gap-2 mt-14">
-                <a class="px-5 py-3 border text-[#d26e21] border-[#BB9944] w-60 text-center" href="/otherPlanet.html">Your age
-                    on other planet</a>
-                <a class="px-5 py-3 border text-[#BB9944] border-zinc-500 w-60 text-center" href="/homepage.html">Back
-                    to Homepage</a>
-                <a class="px-5 py-3 border text-[#BB9944] border-zinc-500 w-60 text-center" href="/index.html">Go to
-                    Landing Page</a>
+        <div class="w-[18%] max-[600px]:w-full max-[600px]:flex">
+            <img class="pointer-events-none max-[600px]:h-40 max-[600px]:w-40" src="./images/dd-logo.jpg" alt="">
+            <div class="flex flex-col gap-2 mt-14 max-[600px]:mt-8">
+                <a class="px-5 py-3 border text-[#d26e21] border-[#BB9944] w-60 text-center max-[600px]:border-none max-[600px]:p-0" href="/otherPlanet.html">Your age on other planet</a>
+                <a class="px-5 py-3 border text-[#BB9944] border-zinc-500 w-60 text-center max-[600px]:border-none max-[600px]:p-0" href="/homepage.html">Back to Homepage</a>
+                <a class="px-5 py-3 border text-[#BB9944] border-zinc-500 w-60 text-center max-[600px]:border-none max-[600px]:p-0" href="/index.html">Go to Landing Page</a>
             </div>
         </div>
 
-        <div class="w-[50%] pt-1">
-            <h1 class="paint text-3xl">Enter your details mortal</h1>
+        <div class="w-[50%] pt-1 max-[600px]:mt-8 max-[600px]:p-2 max-[600px]:w-full">
+            <h1 class="paint text-3xl max-[600px]:text-2xl">Enter your details mortal</h1>
             <div class="w-full h-[1px] bg-[#BB9944]"></div>
             <p class="pt-3 text-sm capitalize">Please fill out this form, don't be afraid to share your data - it's necessary only for your Death Date calculations, the only thing you should be concerned about is the time you have left...</p>
 
             <!-- form -->
-            <form class="mt-12">
+            <form class="mt-12 max-[600px]:mt-6">
 
                 <!-- name -->
                 <div class="mt-4 flex">
@@ -54,12 +51,12 @@
                         <label class="block cursor-pointer mb-[1.15px] ml-1" for="male">Male</label>
                     </div>
 
-                    <div class="flex items-center justify-center ml-5">
+                    <div class="flex items-center justify-center ml-5 max-[600px]:ml-2">
                         <input class="appearance-none cursor-pointer rounded-full w-[12px] h-[12px] border-[2px] border-[#C4B48A] transition-all duration-200 ease-linear relative checked:border-[4px] checked:border-[#d9be79] bg-transparent" type="radio" id="female" name="Gender" value="Female" required/>
                         <label class="block cursor-pointer mb-[1.15px] ml-1" for="female">Female</label>
                     </div>
 
-                    <div class="flex items-center justify-center ml-5">
+                    <div class="flex items-center justify-center ml-5 max-[600px]:ml-2">
                         <input class="appearance-none cursor-pointer rounded-full w-[12px] h-[12px] border-[2px] border-[#C4B48A] transition-all duration-200 ease-linear relative checked:border-[4px] checked:border-[#d9be79] bg-transparent" type="radio" id="other" name="Gender" value="other" required/>
                         <label class="block cursor-pointer mb-[1.15px] ml-1" for="other">Other</label>
                     </div>
@@ -69,7 +66,7 @@
                 <div class="mt-4 flex">
                     <label class="w-40 cursor-pointer h-max block" for="height">Height <span class="font-bold">:</span></label>
                     <div class="flex w-[40%]">
-                        <input class="number bg-[#1B1109] rounded-sm h-[22px] w-[20%] border border-zinc-600 outline-none py-[2px] px-1 text-sm" type="number" min="130" max="185" name="height" id="height" required autocomplete="off">
+                        <input class="number bg-[#1B1109] rounded-sm h-[22px] w-[20%] border border-zinc-600 outline-none py-[2px] px-1 text-sm max-[600px]:w-[30%]" type="number" min="130" max="185" name="height" id="height" required autocomplete="off">
                         <label class="ml-1 block" for="height">cm</label>
                     </div>
                 </div>
@@ -78,7 +75,7 @@
                 <div class="mt-4 flex">
                     <label class="w-40 cursor-pointer h-max block" for="weight">weight <span class="font-bold">:</span></label>
                     <div class="flex w-[40%]">
-                        <input class="number bg-[#1B1109] rounded-sm h-[22px] w-[20%] border border-zinc-600 outline-none py-[2px] px-1 text-sm" type="number" min="25" max="120" name="weight" id="weight" required autocomplete="off">
+                        <input class="number bg-[#1B1109] rounded-sm h-[22px] w-[20%] border border-zinc-600 outline-none py-[2px] px-1 text-sm max-[600px]:w-[30%]" type="number" min="25" max="120" name="weight" id="weight" required autocomplete="off">
                         <label class="ml-1 block" for="weight">kg</label>
                     </div>
                 </div>
@@ -103,8 +100,8 @@
                 </div>
 
                 <!-- submit form -->
-                <div class="bgImage text-center w-[29%] py-1 bg-cover bg-center bg-no-repeat rounded-md mt-6">
-                    <input class="calculate cursor-pointer" type="submit" value="Calculate Death Date">
+                <div class="bgImage text-center w-[29%] py-1 bg-cover bg-center bg-no-repeat rounded-md mt-6 max-[600px]:mt-8 max-[600px]:w-[45%]">
+                    <input class="calculate cursor-pointer max-[600px]:text-sm" type="submit" value="Calculate Death Date">
                 </div>
             </form>
         </div>

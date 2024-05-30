@@ -44,3 +44,28 @@ const animateLandingOpenLink = () => {
 hoverAudioPlayer();
 infiniteLoopAudio();
 animateLandingOpenLink();
+
+const animateLandingOpenLinkResponsive = () => {
+    document.querySelector(".forgotten").addEventListener("click", () => {
+        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;;
+        gsap.killTweensOf("#main");
+    
+        if(width <= 600) {
+            gsap.to("#main", {
+                scale: 1.2,
+                transformOrigin: "center center",
+                duration: 0.5 // optional duration for the animation
+            });
+        } else {
+            // Animation for larger screens (if needed)
+            gsap.to("#main", {
+                scale: 1.4,
+                transformOrigin: "center center",
+                duration: 0.5 // optional duration for the animation
+            });
+        }
+    });
+}
+animateLandingOpenLinkResponsive();
+
+window.addEventListener('resize', animateLandingOpenLinkResponsive);
