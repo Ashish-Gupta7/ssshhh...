@@ -23,7 +23,7 @@ const infiniteLoopAudio = () => {
 
 const animateLandingOpenLink = () => {
     const openLink = () => {
-        window.location.href = "./homepage.html";
+        window.location.href = "./homepage/index.html";
     }
     
     const forgotten = document.querySelector(".forgotten");

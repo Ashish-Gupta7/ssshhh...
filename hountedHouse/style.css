@@ -1,14 +1,14 @@
 @font-face {
     font-family: paint;
-    src: url(./fonts/PaintDropsRegular-0WaJo.ttf);
+    src: url(../fonts/PaintDropsRegular-0WaJo.ttf);
 }
 @font-face {
     font-family: butcherman;
-    src: url(./fonts/Butcherman-Regular.ttf);
+    src: url(../fonts/Butcherman-Regular.ttf);
 }
 @font-face {
     font-family: creepster;
-    src: url(./fonts/Creepster-Regular.ttf);
+    src: url(../fonts/Creepster-Regular.ttf);
 }
 
 .paint{
@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb{
     counter-increment: myCount;
 }
 .head{
-    background-image: url(./images/head.png);
+    background-image: url(../images/head.png);
     position: fixed;
     height: 100%;
     width: 150%;

@@ -1,14 +1,14 @@
 @font-face {
     font-family: paint;
-    src: url(./fonts/PaintDropsRegular-0WaJo.ttf);
+    src: url(../fonts/PaintDropsRegular-0WaJo.ttf);
 }
 @font-face {
     font-family: butcherman;
-    src: url(./fonts/Butcherman-Regular.ttf);
+    src: url(../fonts/Butcherman-Regular.ttf);
 }
 @font-face {
     font-family: creepster;
-    src: url(./fonts/Creepster-Regular.ttf);
+    src: url(../fonts/Creepster-Regular.ttf);
 }
 *{
     margin: 0;
@@ -26,7 +26,7 @@ html, body{
     font-family: creepster;
 }
 #home{
-    background-image: url(./images/premium_photo-1694111281053-3e95c763924d.avif);
+    background-image: url(../images/premium_photo-1694111281053-3e95c763924d.avif);
 }
 #home::after{
     background-image: radial-gradient(black, #00ff00, black, #00ff00);
