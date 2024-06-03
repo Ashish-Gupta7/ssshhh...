@@ -47,7 +47,7 @@ animateLandingOpenLink();
 
 const animateLandingOpenLinkResponsive = () => {
     document.querySelector(".forgotten").addEventListener("click", () => {
-        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;;
+        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         gsap.killTweensOf("#main");
     
         if(width <= 600) {

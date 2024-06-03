@@ -262,7 +262,6 @@ const forNextBirthday = (date) => {
     var bDay = new Date(date[2], date[1], date[0]);
     var cDay = new Date();
 
-    console.log(bDay);
     // next birthday
     var bDate = bDay.getDate();
     var bMonth = bDay.getMonth();
@@ -312,9 +311,6 @@ const forNextBirthday = (date) => {
     // Convert days to years (considering leap years)
     const exactAgeInYears = differenceInDays / 365.25;
     const fixedAge = Number(exactAgeInYears.toFixed(1));
-
-    console.log(fixedDays);
-    console.log(fixedAge);
 
     const formateAnyDate = (formate) => {
         const fday = formate.getDate();

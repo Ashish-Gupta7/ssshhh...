@@ -14,7 +14,7 @@
     <div class="ddbg selection:text-red-600 w-full min-h-full bg-black text-[#C4B48A] py-12 px-20 flex gap-20 after:contents-[] after:h-full after:w-full after:absolute after:top-0 after:left-0 after:bg-no-repeat after:bg-center after:bg-contain after:opacity-[.05] after:pointer-events-none relative max-[600px]:overflow-hidden max-[600px]:px-2 max-[600px]:block max-[600px]:py-4">
 
         <!-- left logo & links -->
-        <div class="w-[18%] max-[600px]:w-full max-[600px]:flex">
+        <div class="afterSubmitHidePage w-[18%] max-[600px]:w-full max-[600px]:flex">
             <img class="pointer-events-none max-[600px]:h-40 max-[600px]:w-40" src="../images/dd-logo.jpg" alt="">
             <div class="flex flex-col gap-2 mt-14 max-[600px]:mt-8">
                 <a class="px-5 py-3 border text-[#d26e21] border-[#BB9944] w-60 text-center max-[600px]:border-none max-[600px]:p-0" href="../otherPlanet/index.html">Your age on other planet</a>
@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="w-[50%] pt-1 max-[600px]:mt-8 max-[600px]:p-2 max-[600px]:w-full">
+        <div class="afterSubmitHidePage w-[50%] pt-1 max-[600px]:mt-8 max-[600px]:p-2 max-[600px]:w-full">
             <h1 class="paint text-3xl max-[600px]:text-2xl">Enter your details mortal</h1>
             <div class="w-full h-[1px] bg-[#BB9944]"></div>
             <p class="pt-3 text-sm capitalize">Please fill out this form, don't be afraid to share your data - it's necessary only for your Death Date calculations, the only thing you should be concerned about is the time you have left...</p>
@@ -47,7 +47,7 @@
                 <div class="mt-4 flex">
                     <label class="w-40 h-max block" for="Gender">Gender <span class="font-bold">:</span></label>
                     <div class="flex items-center justify-center">
-                        <input class="appearance-none cursor-pointer rounded-full w-[12px] h-[12px] border-[2px] border-[#C4B48A] transition-all duration-200 ease-linear relative checked:border-[4px] checked:border-[#d9be79] bg-transparent" type="radio" id="male" name="Gender" value="Male"  required/>
+                        <input class="appearance-none cursor-pointer rounded-full w-[12px] h-[12px] border-[2px] border-[#C4B48A] transition-all duration-200 ease-linear relative checked:border-[4px] checked:border-[#d9be79] bg-transparent" type="radio" id="male" name="Gender" value="Male" required/>
                         <label class="block cursor-pointer mb-[1.15px] ml-1" for="male">Male</label>
                     </div>
 
@@ -107,19 +107,19 @@
         </div>
 
         <!-- calculate death date -->
-        <div class="calculatedData opacity-0 cursor-default w-[37%] border rounded-sm border-zinc-600 my-12 mx-16 absolute right-0 bottom-0 px-6 py-4">
+        <div class="calculatedData opacity-0 cursor-default w-[37%] border rounded-sm border-zinc-600 my-12 mx-16 absolute right-0 bottom-0 px-6 py-4 max-[600px]:w-full max-[600px]:top-0 max-[600px]:left-0 max-[600px]:p-0 max-[600px]:m-0 max-[600px]:my-10 max-[600px]:pointer-events-none max-[600px]:border-none max-[600px]:flex max-[600px]:flex-col max-[600px]:items-center">
             <!-- info -->
             <h1 class="yourName spanOpacity paint text-3xl"></h1>
-            <div class="w-full bg-[#bb9944] h-[1px] mb-3"></div>
+            <div class="w-full bg-[#bb9944] h-[1px] mb-3 max-[600px]:w-[92%] max-[600px]:mt-6"></div>
 
-            <p class="text-sm">~ The Mechanism computes date in three basis: <span class="text-[#bb9944]">BMI, Average Life Expectancy and Your Date of Birth</span>.</p>
+            <p class="text-sm max-[600px]:w-[92%]">~ The Mechanism computes date in three basis: <span class="text-[#bb9944] max-[600px]:w-[92%]">BMI, Average Life Expectancy and Your Date of Birth</span>.</p>
 
-            <p class="text-sm mt-1">~ You will live almost <span class="totalLive spanOpacity text-[#bb9944]"></span></p>
+            <p class="text-sm mt-1 max-[600px]:w-[92%]">~ You will live almost <span class="totalLive spanOpacity text-[#bb9944]"></span></p>
 
-            <p class="bmiInfo text-sm mt-1 spanOpacity"></p>
+            <p class="bmiInfo text-sm mt-1 spanOpacity max-[600px]:w-[92%]"></p>
 
             <!-- data -->
-            <div class="mt-5">
+            <div class="mt-5 max-[600px]:w-[92%] max-[600px]:mt-10">
                 <div class="flex items-center justify-between">
                     <h3>Your BMI:</h3>
                     <h2 class="opacity-0 bmi text-[#bb9944]"></h2>
@@ -139,12 +139,12 @@
             </div>
 
             <!-- graph -->
-            <div class="w-full h-4 mt-5 rounded-full bg-transparent border border-zinc-800 shadow shadow-[#4A2204]">
-                <div class="h-full w-full rounded-full overflow-hidden">
+            <div class="w-full h-4 mt-5 rounded-full bg-transparent border border-zinc-800 shadow shadow-[#4A2204] max-[600px]:w-[92%] max-[600px]:mt-7">
+                <div class="h-full w-full rounded-full overflow-hidden max-[600px]:w-full">
                     <img class="graph opacity-0 w-[0%] h-full rounded-full" src="../images/dd-btn.jpg" alt="">
                 </div>
             </div>
-            <div class="graph w-full mt-[2px] h-5 bg-transparent flex gap-[38.4px]">
+            <div class="graph w-full mt-[2px] h-5 bg-transparent flex gap-[38.4px] max-[600px]:w-[92%] max-[600px]:gap-[21.3px]">
                 <div class="flex flex-col justify-center items-center">
                     <div class="w-[2px] h-1 bg-[#bb99449d]"></div>
                     <p class="text-xs text-[#bb9944]">0</p>
@@ -193,6 +193,7 @@
             <div class="w-full h-full mt-7 bg-transparent flex items-center justify-center">
                 <img src="./images/dd-hr.jpg" alt="">
             </div>
+            <div class="hidden paint underline max-[600px]:block max-[600px]:pointer-events-auto mb-[33%] capitalize text-sm"><a href="../otherPlanet/index.html">See how old would you be on other planets</a></div>
         </div>
     </div>
 

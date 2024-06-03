@@ -47,7 +47,6 @@ var params = getUrlParams(url);
 var bmi = params.weight / ((params.height / 100) * (params.height / 100));
 
 bmi = parseFloat(bmi.toFixed(2));
-console.log(bmi);
 var getWeightCategory = (bmi) => {
     if (bmi < 18.5) {
         return "Underweight";  // Underweight
@@ -101,14 +100,11 @@ var Drugs = params.Drugs;
 var Cigarettes = params.Cigarettes;
 
 if (Alcohol && Drugs && Cigarettes) {
-    console.log("12");
     lifeExpectancy -= 12;
 } else if ((Alcohol && Drugs) || (Drugs && Cigarettes) || (Alcohol && Cigarettes)) {
     lifeExpectancy -= 8;
-    console.log("8");
 } else if (Alcohol || Drugs || Cigarettes) {
     lifeExpectancy -= 5;
-    console.log("5");
 } else {
     lifeExpectancy += 5;
 }
@@ -122,10 +118,8 @@ var birthDay = Number(birthSplit[2]);
 var deathDate = birthYear + lifeExpectancy;
 // split into span
 var almostLive = `${lifeExpectancy} years, ${birthMonth}, months and ${birthDay} days.`;
-console.log(almostLive);
 totalLive.innerHTML = almostLive;
 var splitLive = totalLive.textContent.split("");
-console.log(splitLive);
 var liveContent = "";
 splitLive.forEach(elm => {
     liveContent = liveContent + `<span>${elm}</span>`;
@@ -156,7 +150,6 @@ predictedDeathDate.innerHTML = `${birthDay}-${birthMonth}-${deathDate}`;
 var leftYear = Number(deathDate) - new Date().getFullYear();
 timeLeft.innerHTML = `Almost ${leftYear} Years !`;
 // var graphWidth = Number(`${leftYear}%`);
-// console.log(graphWidth);
 
 // Countdown timer setup
 const countdownSeconds = leftYear * 365 * 24 * 60 * 60; // Initial count down time in seconds
@@ -165,7 +158,6 @@ function updateCountdown() {
     // Check if time has finished
     if (remainingTime <= 0) {
         clearInterval(intervalId); // Stop the interval
-        console.log("Countdown finished!");
         return;
     }
     // Update the display
@@ -179,10 +171,18 @@ const intervalId = setInterval(updateCountdown, 1000);
 // gsap animation
 if (params != "") {
     var tl = gsap.timeline();
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    if(width <= 600) {
+        tl.to(".afterSubmitHidePage", {
+            opacity: 0,
+            pointerEvents: "none"
+        }, "changeOpac");
+    }
     tl.to(calculatedData, {
         opacity: 1,
         cursor: "auto",
-    });
+    }, "changeOpac");
     tl.to(".yourName.spanOpacity span", {
         opacity: 1,
         stagger: .2
@@ -216,7 +216,7 @@ if (params != "") {
 }
 
 // when page refresh url refresh
-if (performance.navigation.type === 1) {
+if (performance.navigation.type === 0) {
     // Reset URL to just the current page path
     window.history.replaceState(null, null, window.location.pathname);
 }
