@@ -1,6 +1,6 @@
 # Help me!
 ## problem 1
-[otherPlanet](otherPlanet.html)
+[otherPlanet](./otherPlanet/index.html)
 ```
             <div class="mercury w-full h-full relative">
 
@@ -77,7 +77,7 @@ class="opacity-40 select-none text-xs">.........................................
 `isme mai dots ko likhna nhi chahta hu mai chahta hu ki ye dots mercury class ke width ke hisab se automatic hi adjust ho jaye.`
 
 ## problem 2
-[otherPlanet](otherPlanet.html)
+[otherPlanet](./otherPlanet/index.html)
 `iss code me ->`
 ```
         <!-- homepage content -->
@@ -113,5 +113,5 @@ class="opacity-40 select-none text-xs">.........................................
 ```
 
 ## problem 3
-[otherPlanet](otherPlanet.html)
+[otherPlanet](./otherPlanet/index.html)
 `isme jab mai date ko fill krne ke baad go pr click krta hu to ek animation ke baad otherPlanets pr age dikhti hai lekin jab mai waha pr scrollTrigger lagane ki kosis krta hu to ye kaam nhi kr rha hai.`
